@@ -16,7 +16,7 @@ def genName(env):
         'Abnahme': 'a',
         'Produktion': 'p'
     }
-    return 'm999' + ''.join(random.choice(string.ascii_lowercase) for j in range(5)) + str(randint(100, 999)) + zoneChooser.get(env)
+    return 'm999' + ''.join(random.choice(string.ascii_lowercase) for j in range(5)) + str(randint(1, 999)).zfill(3) + zoneChooser.get(env)
 
 def genTestdata():
     with open('./data.csv', 'w+') as csvfile:
